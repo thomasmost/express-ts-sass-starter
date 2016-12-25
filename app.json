@@ -1,0 +1,8 @@
+{
+  "name": "tcm_home",
+  "description": "Character Sheet for Thomas Constantine Moore",
+  "repository": "https://bitbucket.org/tcmoore/tcm_home",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express","personal"],
+  "image": "heroku/nodejs"
+}

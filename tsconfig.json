@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "typeRoots": [ "node_modules/@types" ],
+        "outDir": "./dist/server"
+    },
+    "include": [
+        "src/server/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,24 @@
+# This file tells Git to ignore (not track) certain files.
+# A line that begins with a # (like this one) is a comment.
+# There are several commented-out declarations that are included here just as examples of how
+# to construct that type of declaration.
+
+# Ignore file types in the top level directory.
+# *.doc
+
+# Ignore all the files in a subdirectory.
+# Application/Foo/*
+
+# And now for some active declarations...
+
+.tscache/
+node_modules/
+app.js
+app.js.map
+dist/
+public/**/*.js
+public/**/*.map
+public/**/*.css
+public/**/*.html
+public/**/*.json
+!src/server/routes/
