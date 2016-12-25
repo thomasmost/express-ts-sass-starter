@@ -26,3 +26,4 @@ public/*.png
 public/*.bmp
 public/fonts/**/*
 !src/server/routes/
+*.log
