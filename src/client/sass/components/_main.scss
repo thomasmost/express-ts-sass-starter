@@ -11,12 +11,22 @@
 html {
    height: 100%;
    body {
-       background-image: url("../assets/bg.jpg");
-       background-position: center center;
-       background-size: cover;
-       height: 100%;
-       padding-top: 1.6em;
-
+      height: 100%;
+      position: relative;
+      padding-top: 1.6em;
+      div#bg {
+         background-image: url("../assets/bg.jpg");
+         background-position: center center;
+         background-size: cover;
+         display: block;
+         height: 100%;
+         width: 100%;
+         transform: translateZ(0);
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: -1;
+      }
       div#app {
          @include outer-container;
          padding: 1.6em;
@@ -25,6 +35,7 @@ html {
          height: 100%;
          max-width: 1200px;
          margin: auto;
+         margin-bottom: 1.6em;
          background-color: white;
          img {
             @include span-columns(3 of 12);
