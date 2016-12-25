@@ -22,5 +22,7 @@ public/**/*.css
 public/**/*.html
 public/**/*.json
 public/*.jpg
-public/fonts/*.json
+public/*.png
+public/*.bmp
+public/fonts/**/*
 !src/server/routes/
