@@ -21,4 +21,6 @@ public/**/*.map
 public/**/*.css
 public/**/*.html
 public/**/*.json
+public/*.jpg
+public/fonts/*.json
 !src/server/routes/
