@@ -8,7 +8,7 @@
     "build": "tsc && webpack",
     "start": "node ./dist/server/app.js"
   },
-  "author": "",
+  "author": "Thomas Constantine Moore",
   "license": "ISC",
   "engines": {
     "node": "7.2.1"
