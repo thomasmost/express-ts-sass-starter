@@ -7,7 +7,7 @@ Ready to deploy starter-app configured for webpack, typescript, and sass
 
 Once you've forked the repository and installed dependencies, run `webpack --watch`
 
-Client/server typescript and SASS will be compiled, as well as custom fonts, sass-loaded image assets, and index.html, all from `src`
+Client typescript and SASS will be compiled, as well as custom fonts, sass-loaded image assets, and index.html, all from `src`
 
 Currently the server is located in `\dist` and all compiled client files are built to `\public`
 
