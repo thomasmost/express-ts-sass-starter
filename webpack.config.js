@@ -3,11 +3,27 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var NodemonBrowsersyncPlugin = require('nodemon-browsersync-webpack-plugin');
+ 
+var styleLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      sourceMap: true
+    }
+  },
+  {
+    loader: 'sass-loader',
+    options: {
+      sourceMap: true
+    }
+  }
+]
+
 
 module.exports = {
   resolve: {
-    extensions: ['', '.scss', '.ts', '.js']
+    extensions: ['.scss', '.ts', '.js']
   },
 
   plugins: [
@@ -18,13 +34,17 @@ module.exports = {
       hash: true,
       template: 'src/index.html'
     }),
-    new LiveReloadPlugin(),
-    new BrowserSyncPlugin({
-      // browse to http://localhost:3000/ during development, 
-      // ./public directory is being served 
-      host: 'localhost',
-      port: 4000,
-      server: { baseDir: ['public'] }
+    // new LiveReloadPlugin(),
+    new NodemonBrowsersyncPlugin({
+      script: 'dist/server/app.js',
+      ignore: [
+          "src/*", 
+          "public/*"
+      ],
+      ext: 'js json',
+      verbose: true
+    }, {
+      proxy: 'localhost:5000'
     })
   ],
 
@@ -38,7 +58,7 @@ module.exports = {
   devtool: 'source-map',
 
   module: {
-    loaders: [
+    rules: [
       { test: /\.jpg$/,    loader: "url-loader?limit=10000&minetype=image/jpg" },
       {
        test: /\.js$/,
@@ -51,19 +71,16 @@ module.exports = {
       },
       {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract(
-              'style-loader', // The backup style loader
-              'css-loader?sourceMap!sass-loader?sourceMap'
-          )
+          loader: ExtractTextPlugin.extract({
+              fallbackLoader: 'style-loader', // The backup style loader
+              loader: styleLoaders
+          })
       },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 loader: 'file?name=fonts/[name].[ext]'
             }
-    ],
-    sassLoader: {
-      includePaths: ["./src/client/sass/"]
-    }
+    ]
   },
 
   devServer: {
