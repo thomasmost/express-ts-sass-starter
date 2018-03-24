@@ -22,7 +22,7 @@ module.exports = {
       moment: "moment/moment.js",
     },
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: [".ts", ".d.ts", ".tsx", ".js", ".json", ".jpg", ".svg", ".scss", ".ttf"]
+    extensions: [".ts", ".tsx", ".js", ".svg", ".scss"]
   },
   mode: "development",
   plugins: [
@@ -74,8 +74,8 @@ module.exports = {
           })
       },
       {
-          test: /\.(eot|ttf|woff|woff2)$/,
-          loader: "file-loader?name=fonts/[name].[ext]"
+         test: /\.(eot|ttf|woff|woff2)$/,
+         loader: "file-loader?name=fonts/[name].[ext]"
       },
       {
         test: /\.svg$/,
