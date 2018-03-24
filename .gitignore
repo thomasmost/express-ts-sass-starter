@@ -13,17 +13,13 @@
 
 .tscache/
 node_modules/
-app.js
-app.js.map
-dist/
-public/**/*.js
-public/**/*.map
-public/**/*.css
-public/**/*.html
-public/**/*.json
-public/*.jpg
-public/*.png
-public/*.bmp
+dist/**/*
+public/**/*
 public/fonts/**/*
 !src/server/routes/
 *.log
+
+**/*.js
+**/*.js.map
+**/*.jsx
+**/*.jsx.map

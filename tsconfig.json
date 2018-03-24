@@ -1,16 +1,30 @@
 {
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "typeRoots": [ "node_modules/@types" ],
-        "outDir": "./dist/server"
-    },
-    "include": [
-        "src/server/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+   "compilerOptions": {
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "typeRoots": [ "node_modules/@types" ],
+      "outDir": "./dist",
+      "experimentalDecorators": true,
+      "target": "es5",
+      "emitDecoratorMetadata": true,
+      "lib": [ "es2015", "dom" ],
+      "suppressImplicitAnyIndexErrors": true,
+      "jsx": "react",
+      "skipLibCheck": true
+   },
+   "awesomeTypescriptLoaderOptions": {
+      "useWebpackText": true,
+      "useTranspileModule": true,
+      "doTypeCheck": true,
+      "forkChecker": true
+   },
+   "include": [
+      "src/server/server.ts",
+      "src/custom.d.ts"
+   ],
+   "exclude": [
+      "node_modules/**/*"
+   ]
 }

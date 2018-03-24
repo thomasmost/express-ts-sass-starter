@@ -27,7 +27,7 @@
     "no-use-before-declare": true,
     "no-var-requires": false,
     "one-line": [
-      true,
+      false,
       "check-open-brace",
       "check-catch",
       "check-else",

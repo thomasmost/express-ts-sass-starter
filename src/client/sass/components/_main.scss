@@ -28,7 +28,7 @@ html {
          z-index: -1;
       }
       div#app {
-         @include outer-container;
+         @include grid-container;
          padding: 1.6em;
          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
          width: 96%;
@@ -38,17 +38,15 @@ html {
          margin-bottom: 1.6em;
          background-color: white;
          img {
-            @include span-columns(3 of 12);
+            @include grid-column(3 of 12);
          }
          h1 {
-            @include span-columns(9 of 12);
-            @include omega;
+            @include grid-column(9 of 12);
             font-family: 'Lato', serif;
             font-size: modular-scale(4);
          }
           h3 {
-            @include span-columns(9 of 12);
-            @include omega;
+            @include grid-column(9 of 12);
             font-family: 'Soulmaker in the Mountains', serif;
             font-size: modular-scale(5);
             margin-top: 1em;

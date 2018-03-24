@@ -1,3 +1,3 @@
-require('./sass/index');
+require("./sass/index");
 
-console.log('Bundling Successful')
+console.log("Bundling Successful")
