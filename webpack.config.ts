@@ -45,7 +45,7 @@ module.exports = {
        { from: "src/static" }
     ]),
   ],
-  entry: ["./src/client/main.ts"],
+  entry: ["./src/client/app.ts"],
   output: {
     path: __dirname + "/public/",
     filename: "bundle.js"
