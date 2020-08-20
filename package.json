@@ -36,7 +36,7 @@
     "@types/prop-types": "15.5.2",
     "@types/q": "1.0.0",
     "@types/typescript": "2.0.0",
-    "bcrypt": "1.0.3",
+    "bcrypt": "5.0.0",
     "body-parser": "^1.19.0",
     "bourbon": "4.3.4",
     "bourbon-neat": "2.0.0",
